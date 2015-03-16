@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NALabelCell.h"
 
+@class NAPickerView;
 @protocol NAPickerViewDelegate <NSObject>
 
 typedef void (^NACellConfigureBlock)(id, id);
@@ -16,6 +17,8 @@ typedef void (^NACellHighlightConfigureBlock)(id);
 typedef void (^NACellUnHighlightConfigureBlock)(id);
 
 - (void)didSelectedAtIndexDel:(NSInteger)index;
+@optional
+- (void)pickerView:(NAPickerView *) pickerView didSelectedAtIndex:(NSInteger)index;
 
 @end
 

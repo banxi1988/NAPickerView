@@ -224,6 +224,9 @@
 	NSInteger rounded = (NSInteger)(lround(floatVal));
 	targetContentOffset->y = rounded * rowHeight;
     [self.delegate didSelectedAtIndexDel:rounded];
+    if ([self.delegate  respondsToSelector:@selector(pickerView:didSelectedAtIndex:) ] ) {
+        [self.delegate pickerView:self didSelectedAtIndex:rounded];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

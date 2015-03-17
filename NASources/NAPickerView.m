@@ -95,6 +95,15 @@
     };
 }
 
+-(void)refreshWithItems:(NSArray *)items{
+    _items = nil;
+    NSIndexPath *oldIndexPath = self.currentIndex;
+    self.items = [[NSMutableArray alloc] initWithArray:items];
+    [self.tableView reloadData];
+    NSInteger newIndex = MAX(oldIndexPath.row, self.items.count - 1);
+    self.index =  newIndex;
+}
+
 - (CGFloat)headerHeight
 {
     return self.bounds.size.height/2 - [self cellHeight]/2;

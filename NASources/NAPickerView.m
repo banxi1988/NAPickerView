@@ -129,6 +129,10 @@
                                   animated:NO];
 }
 
+- (NSInteger)selectedIndex{
+    return self.currentIndex.row;
+}
+
 - (void)setShowOverlay:(BOOL)showOverlay
 {
     if (showOverlay != mShowOverlay) {

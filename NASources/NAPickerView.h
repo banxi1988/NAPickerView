@@ -50,4 +50,6 @@ typedef void (^NACellUnHighlightConfigureBlock)(id);
 
 - (void)setIndex:(NSInteger)index;
 
+// return the current selected Index
+- (NSInteger)selectedIndex;
 @end

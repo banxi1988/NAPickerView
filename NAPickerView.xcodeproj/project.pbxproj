@@ -71,7 +71,7 @@
 		DCA4E96317AE98390062BAEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = Resources/Plists/.gitignore; sourceTree = "<group>"; };
 		DCA4E96617AE98390062BAEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = Resources/Sounds/.gitignore; sourceTree = "<group>"; };
 		DCA4E96917AE98390062BAEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = Resources/Xibs/.gitignore; sourceTree = "<group>"; };
-		DCA4E97017AE98390062BAEA /* NAPickerViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NAPickerViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA4E97017AE98390062BAEA /* NAPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NAPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA4E97917AE98390062BAEA /* NAPickerViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NAPickerViewTests-Info.plist"; sourceTree = "<group>"; };
 		DCA4E97B17AE98390062BAEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DCA4E97D17AE98390062BAEA /* NAPickerViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAPickerViewTests.h; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA4E93317AE98380062BAEA /* NAPickerView.app */,
-				DCA4E97017AE98390062BAEA /* NAPickerViewTests.octest */,
+				DCA4E97017AE98390062BAEA /* NAPickerViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 			);
 			name = NAPickerViewTests;
 			productName = NAPickerViewTests;
-			productReference = DCA4E97017AE98390062BAEA /* NAPickerViewTests.octest */;
+			productReference = DCA4E97017AE98390062BAEA /* NAPickerViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

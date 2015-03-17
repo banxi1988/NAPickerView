@@ -100,7 +100,7 @@
     NSIndexPath *oldIndexPath = self.currentIndex;
     self.items = [[NSMutableArray alloc] initWithArray:items];
     [self.tableView reloadData];
-    NSInteger newIndex = MAX(oldIndexPath.row, self.items.count - 1);
+    NSInteger newIndex = MIN(oldIndexPath.row, self.items.count - 1);
     self.index =  newIndex;
 }
 
@@ -265,9 +265,13 @@
     }
     
     NAPickerCell *currentCell = (NAPickerCell *)[self.tableView cellForRowAtIndexPath:self.currentIndex];
-    self.unhighlightBlock(currentCell);
+    if (currentCell) {
+        self.unhighlightBlock(currentCell);
+    }
     NAPickerCell *middleCell = (NAPickerCell *)[self.tableView cellForRowAtIndexPath:middleIndex];
-    self.highlightBlock(middleCell);
+    if(middleCell){
+        self.highlightBlock(middleCell);
+    }
     self.currentIndex = middleIndex;
 }
 

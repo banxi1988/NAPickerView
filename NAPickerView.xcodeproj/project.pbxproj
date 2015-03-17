@@ -24,7 +24,6 @@
 		DCA4E96417AE98390062BAEA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E96317AE98390062BAEA /* .gitignore */; };
 		DCA4E96717AE98390062BAEA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E96617AE98390062BAEA /* .gitignore */; };
 		DCA4E96A17AE98390062BAEA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E96917AE98390062BAEA /* .gitignore */; };
-		DCA4E97217AE98390062BAEA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA4E97117AE98390062BAEA /* SenTestingKit.framework */; };
 		DCA4E97317AE98390062BAEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA4E93617AE98380062BAEA /* UIKit.framework */; };
 		DCA4E97417AE98390062BAEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA4E93817AE98380062BAEA /* Foundation.framework */; };
 		DCA4E97C17AE98390062BAEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E97A17AE98390062BAEA /* InfoPlist.strings */; };
@@ -73,7 +72,6 @@
 		DCA4E96617AE98390062BAEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = Resources/Sounds/.gitignore; sourceTree = "<group>"; };
 		DCA4E96917AE98390062BAEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = Resources/Xibs/.gitignore; sourceTree = "<group>"; };
 		DCA4E97017AE98390062BAEA /* NAPickerViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NAPickerViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCA4E97117AE98390062BAEA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DCA4E97917AE98390062BAEA /* NAPickerViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NAPickerViewTests-Info.plist"; sourceTree = "<group>"; };
 		DCA4E97B17AE98390062BAEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DCA4E97D17AE98390062BAEA /* NAPickerViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAPickerViewTests.h; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA4E97217AE98390062BAEA /* SenTestingKit.framework in Frameworks */,
 				DCA4E97317AE98390062BAEA /* UIKit.framework in Frameworks */,
 				DCA4E97417AE98390062BAEA /* Foundation.framework in Frameworks */,
 			);
@@ -152,7 +149,6 @@
 				DCA4E93617AE98380062BAEA /* UIKit.framework */,
 				DCA4E93817AE98380062BAEA /* Foundation.framework */,
 				DCA4E93A17AE98380062BAEA /* CoreGraphics.framework */,
-				DCA4E97117AE98390062BAEA /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,7 +335,7 @@
 			name = NAPickerViewTests;
 			productName = NAPickerViewTests;
 			productReference = DCA4E97017AE98390062BAEA /* NAPickerViewTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -348,6 +344,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NA;
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = nghialv;
 			};
@@ -553,13 +550,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NAPickerView/NAPickerView-Prefix.pch";
 				INFOPLIST_FILE = "NAPickerViewTests/NAPickerViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -570,13 +567,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NAPickerView/NAPickerView-Prefix.pch";
 				INFOPLIST_FILE = "NAPickerViewTests/NAPickerViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

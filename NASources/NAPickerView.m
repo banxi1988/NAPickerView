@@ -142,6 +142,14 @@
     return self.currentIndex.row;
 }
 
+- (id)selectedValue{
+    if(self.selectedIndex > (self.items.count - 1) ){
+        return nil;
+    }
+        
+    return self.items[self.selectedIndex];
+}
+
 - (void)setShowOverlay:(BOOL)showOverlay
 {
     if (showOverlay != mShowOverlay) {

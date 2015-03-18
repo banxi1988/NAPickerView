@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BXPickerView"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "A Custom Picker View."
   s.description      = <<-DESC
                        A Custom Picker View 
